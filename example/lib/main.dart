@@ -110,14 +110,17 @@ class MyScaffold extends StatelessWidget {
     AdminMenuItem(
       title: 'Top Level',
       icon: Icons.file_copy,
+      expanded: true,
       children: [
         AdminMenuItem(
           title: 'Second Level Item 1',
           route: '/secondLevelItem1',
+
         ),
         AdminMenuItem(
           title: 'Second Level Item 2',
           route: '/secondLevelItem2',
+
         ),
         AdminMenuItem(
           title: 'Third Level',
@@ -129,6 +132,37 @@ class MyScaffold extends StatelessWidget {
             AdminMenuItem(
               title: 'Third Level Item 2',
               route: '/thirdLevelItem2',
+              icon: Icons.image,
+            ),
+          ],
+        ),
+      ],
+    ),
+
+    AdminMenuItem(
+      title: 'Top Level',
+      icon: Icons.file_copy,
+      children: [
+        AdminMenuItem(
+          title: 'Second Level Item 1',
+          route: '/secondLevelItem1',
+
+        ),
+        AdminMenuItem(
+          title: 'Second Level Item 2',
+          route: '/secondLevelItem2',
+
+        ),
+        AdminMenuItem(
+          title: 'Third Level',
+          children: [
+            AdminMenuItem(
+              title: 'Third Level Item 1',
+              route: '/thirdLevelItem2',
+            ),
+            AdminMenuItem(
+              title: 'Third Level Item 2',
+              route: '/thirdLevelItem1',
               icon: Icons.image,
             ),
           ],

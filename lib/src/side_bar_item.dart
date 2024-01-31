@@ -92,7 +92,8 @@ class SideBarItem extends StatelessWidget {
         tilePadding: _getTilePadding(depth),
         leading: _buildIcon(item.icon),
         title: _buildTitle(item.title),
-        initiallyExpanded: selected,
+        initiallyExpanded: item.expanded ?? selected,
+        collapsedIconColor: Colors.white,
         children: childrenTiles,
       ),
     );

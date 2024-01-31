@@ -14,30 +14,42 @@ class SamplePage extends StatelessWidget {
           AdminMenuItem(
             title: 'Dashboard',
             route: '/',
+            expanded: true,
             icon: Icons.dashboard,
           ),
           AdminMenuItem(
             title: 'Top Level',
             icon: Icons.file_copy,
+            expanded: true,
             children: [
               AdminMenuItem(
                 title: 'Second Level Item 1',
                 route: '/secondLevelItem1',
+                expanded: true,
+
               ),
               AdminMenuItem(
                 title: 'Second Level Item 2',
                 route: '/secondLevelItem2',
+                expanded: true,
+
               ),
               AdminMenuItem(
                 title: 'Third Level',
+                expanded: true,
+
                 children: [
                   AdminMenuItem(
                     title: 'Third Level Item 1',
                     route: '/thirdLevelItem1',
+                    expanded: true,
+
                   ),
                   AdminMenuItem(
                     title: 'Third Level Item 2',
                     route: '/thirdLevelItem2',
+                    expanded: true,
+
                   ),
                 ],
               ),
