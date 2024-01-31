@@ -142,6 +142,7 @@ class MyScaffold extends StatelessWidget {
     AdminMenuItem(
       title: 'Top Level',
       icon: Icons.file_copy,
+      expanded: true,
       children: [
         AdminMenuItem(
           title: 'Second Level Item 1',

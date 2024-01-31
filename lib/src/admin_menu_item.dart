@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+typedef OnCallback = void Function(bool value);
 class AdminMenuItem {
   const AdminMenuItem({
     required this.title,
@@ -7,6 +7,7 @@ class AdminMenuItem {
     this.icon,
     this.expanded,
     this.children = const [],
+    this.onCallback
   });
 
   final String title;
@@ -14,4 +15,5 @@ class AdminMenuItem {
   final IconData? icon;
   final bool? expanded;
   final List<AdminMenuItem> children;
+  final OnCallback? onCallback;
 }

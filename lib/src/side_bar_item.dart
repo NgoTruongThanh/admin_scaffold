@@ -69,6 +69,8 @@ class SideBarItem extends StatelessWidget {
     }
 
     int index = 0;
+    bool isChange =false;
+
     final childrenTiles = item.children.map((child) {
       return SideBarItem(
         items: item.children,
@@ -92,8 +94,14 @@ class SideBarItem extends StatelessWidget {
         tilePadding: _getTilePadding(depth),
         leading: _buildIcon(item.icon),
         title: _buildTitle(item.title),
-        initiallyExpanded: item.expanded ?? selected,
+        initiallyExpanded:item.expanded ?? selected,
         collapsedIconColor: Colors.white,
+        onExpansionChanged: (value) {
+          if(item.onCallback !=null)
+            {
+              item.onCallback!(value);
+            }
+        },
         children: childrenTiles,
       ),
     );
