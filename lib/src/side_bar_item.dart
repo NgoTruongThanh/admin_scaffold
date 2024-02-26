@@ -54,7 +54,7 @@ class SideBarItem extends StatelessWidget {
 
     if (item.children.isEmpty) {
       return ListTile(
-        contentPadding:  _getTilePadding(depth, item.icon != null ? 0 : 22),
+        contentPadding:  _getTilePadding(depth, item.icon != null ? 0 : 6),
         leading: item.icon != null? _buildIcon(item.icon, selected): null,
         title: _buildTitle(item.title, selected),
         selected: selected,
@@ -91,7 +91,7 @@ class SideBarItem extends StatelessWidget {
     return Theme(
       data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
       child: ExpansionTile(
-        tilePadding: _getTilePadding(depth, item.icon != null ? 0 : 22),
+        tilePadding: _getTilePadding(depth, item.icon != null ? 0 : 6),
         leading: item.icon != null? _buildIcon(item.icon): null,
         title: _buildTitle(item.title),
         initiallyExpanded:item.expanded ?? selected,
