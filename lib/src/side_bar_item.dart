@@ -142,7 +142,7 @@ class SideBarItem extends StatelessWidget {
 
   EdgeInsets _getTilePadding(int depth) {
     return EdgeInsets.only(
-      left: 5.0 + 5.0 * depth,
+      left: 10.0 + 10.0 * depth,
       right: 10.0,
     );
   }
