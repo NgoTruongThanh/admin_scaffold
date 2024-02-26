@@ -54,7 +54,7 @@ class SideBarItem extends StatelessWidget {
 
     if (item.children.isEmpty) {
       return ListTile(
-        contentPadding: _getTilePadding(depth),
+        contentPadding:  _getTilePadding(depth, item.icon != null ? 0 : 22),
         leading: item.icon != null? _buildIcon(item.icon, selected): null,
         title: _buildTitle(item.title, selected),
         selected: selected,
@@ -91,7 +91,7 @@ class SideBarItem extends StatelessWidget {
     return Theme(
       data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
       child: ExpansionTile(
-        tilePadding: _getTilePadding(depth),
+        tilePadding: _getTilePadding(depth, item.icon != null ? 0 : 22),
         leading: item.icon != null? _buildIcon(item.icon): null,
         title: _buildTitle(item.title),
         initiallyExpanded:item.expanded ?? selected,
@@ -140,9 +140,9 @@ class SideBarItem extends StatelessWidget {
     );
   }
 
-  EdgeInsets _getTilePadding(int depth) {
+  EdgeInsets _getTilePadding(int depth, int edgeInset) {
     return EdgeInsets.only(
-      left: 10.0 + 10.0 * depth,
+      left: 10.0 +edgeInset  + 10.0 * depth,
       right: 10.0,
     );
   }
